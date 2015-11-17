@@ -41,3 +41,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+[Bb]in
+[Oo]bj
+packages
+*.suo
+*.user
+
+# Visual Studio 2015 cache/options directory
+.vs/

@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSQL.AspNet.Identity.EntityFramework", "src\PostgreSQL.AspNet.Identity.EntityFramework\PostgreSQL.AspNet.Identity.EntityFramework.csproj", "{FA718219-F0D7-4E24-855F-3CB01C2A857E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{077FEABA-7D1A-4046-A892-A39E3BBDB50C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "src\Demo\Demo.csproj", "{6996916E-D9A8-4348-8EA3-083C205026A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ABBB6B89-817A-497D-BE43-B1A9D275592C}"
+	ProjectSection(SolutionItems) = preProject
+		PostgreSQLIdentity.sql = PostgreSQLIdentity.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA718219-F0D7-4E24-855F-3CB01C2A857E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA718219-F0D7-4E24-855F-3CB01C2A857E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA718219-F0D7-4E24-855F-3CB01C2A857E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA718219-F0D7-4E24-855F-3CB01C2A857E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6996916E-D9A8-4348-8EA3-083C205026A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6996916E-D9A8-4348-8EA3-083C205026A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6996916E-D9A8-4348-8EA3-083C205026A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6996916E-D9A8-4348-8EA3-083C205026A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA718219-F0D7-4E24-855F-3CB01C2A857E} = {077FEABA-7D1A-4046-A892-A39E3BBDB50C}
+		{6996916E-D9A8-4348-8EA3-083C205026A5} = {077FEABA-7D1A-4046-A892-A39E3BBDB50C}
+	EndGlobalSection
+EndGlobal
