@@ -331,17 +331,7 @@ namespace PostgreSQL.AspNet.Identity.EntityFramework {
 				throw new ArgumentNullException("modelBuilder");
 			}
 
-			// use SearchPublic from connection string if it's set, otherwise use public
-			string schema = "public";
-			if (this.Database.Connection.ConnectionString != null) {
-				var connStringbuilder = new NpgsqlConnectionStringBuilder(this.Database.Connection.ConnectionString);
-				if (!string.IsNullOrEmpty(connStringbuilder.SearchPath)) {
-					schema = connStringbuilder.SearchPath;
-				}
-			}
-
-			// do not use migration
-			Database.SetInitializer<IdentityDbContext>(null);
+			string schema = getConfiguredSchema();
 
 			// Needed to ensure subclasses share the same table
 			var user = modelBuilder.Entity<TUser>()
@@ -416,17 +406,18 @@ namespace PostgreSQL.AspNet.Identity.EntityFramework {
 			return base.ValidateEntity(entityEntry, items);
 		}
 
-		private string getSchema() {
-			string schema = "public";
-
+		/// <summary>
+		/// Return the schema in the connection string if it's specified, otherwise return null
+		/// </summary>
+		/// <returns></returns>
+		private string getConfiguredSchema() {
 			if (this.Database.Connection.ConnectionString != null) {
-				var builder = new NpgsqlConnectionStringBuilder(this.Database.Connection.ConnectionString);
-				if (!string.IsNullOrEmpty(builder.SearchPath)) {
-					schema = builder.SearchPath;
+				var connStringbuilder = new NpgsqlConnectionStringBuilder(this.Database.Connection.ConnectionString);
+				if (!string.IsNullOrEmpty(connStringbuilder.SearchPath)) {
+					return connStringbuilder.SearchPath;
 				}
 			}
-
-			return schema;
+			return "public";
 		}
 	}
 }
