@@ -59,3 +59,6 @@ Note. Specify a database name that does not exist to have it create the database
 ## References
 * This is a port of the [ASPNET Identity for SQL Server](https://aspnetidentity.codeplex.com/). 
 * This project got a jump start from [AspNet.Identity.PostgreSQL](https://github.com/danellos/AspNet.Identity.PostgreSQL)
+
+## LICENSE
+[MIT](/LICENSE)
